@@ -1,113 +1,176 @@
 cat > README.md << 'EOF'
-# ✅ TaskFlow
+<div align="center">
 
-A modern full-stack **MERN Task Manager** with JWT authentication, drag-and-drop task reordering, tags, priority system, analytics dashboard, and glassmorphism UI with dark/light mode.
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/JWT-Authentication-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 
----
+<h1>TaskFlow</h1>
 
-# 🌍 Live Demo
-(Add after deployment)
+<p>
+A modern full-stack MERN Task Manager built with scalable architecture, secure authentication,
+drag-and-drop task organization, analytics dashboard, and a clean glassmorphism UI.
+</p>
 
-Frontend: https://your-frontend-link.vercel.app  
-Backend API: https://your-backend-link.onrender.com/api
-
----
-
-# 📸 Screenshots
-
-### Dashboard — Dark Mode
-![Dashboard Dark](./screenshots/dashboard-dark.png)
-
-### Dashboard — Light Mode
-![Dashboard Light](./screenshots/dashboard-light.png)
+</div>
 
 ---
 
-# ✨ Features
+## Overview
 
-## Authentication
-- JWT based login & signup
-- Password hashing using bcryptjs
-- Protected routes
-- Token stored in localStorage
-- Session expiry
+TaskFlow is a production-ready MERN stack application designed to help users manage tasks efficiently.  
+It includes secure authentication, real-time filtering, priority management, analytics insights, and a smooth modern interface.
 
-## Task Management
-- Create, update, delete tasks
-- Priority levels (Low / Medium / High)
-- Task completion toggle
-- Due dates with overdue detection
-- Tags support
-- Drag and drop task reordering
-
-## Search & Filters
-- Real-time search
-- Filter tasks (All / Pending / Completed)
-
-## Dashboard Stats
-- Total tasks
-- Pending tasks
-- Completion rate
-- Overdue tasks
-
-## UI
-- Dark & Light mode
-- Glassmorphism design
-- Smooth animations
-- Responsive layout
+This project demonstrates full-stack development practices including API design, authentication systems, database modeling, and deployment workflows.
 
 ---
 
-# 🛠 Tech Stack
+## Key Features
 
-Frontend:
-React, Vite, React Router
+### Authentication & Security
+- JWT-based authentication system
+- Secure password hashing using bcrypt
+- Protected API routes
+- Token-based session handling
+- Environment variable protection
 
-Backend:
-Node.js, Express
+### Task Management
+- Create, edit, delete tasks
+- Priority levels (Low, Medium, High)
+- Task completion tracking
+- Due date management
+- Tag-based organization
+- Persistent drag-and-drop reordering
 
-Database:
-MongoDB Atlas, Mongoose
+### Search & Filtering
+- Real-time task search
+- Filter by task status
+- Tag-based filtering
 
-Authentication:
-JWT, bcryptjs
+### Dashboard Insights
+- Total tasks overview
+- Pending tasks tracking
+- Completion analytics
+- Overdue task indicators
 
-Tools:
-Axios, Nodemon, Concurrently
+### User Experience
+- Dark and Light mode
+- Glassmorphism interface
+- Responsive design
+- Smooth UI interactions
+- Notification feedback
 
 ---
 
-# 🚀 Quick Start
+## Tech Stack
 
-Clone the repo
+Frontend
+- React
+- Vite
+- React Router
+- Axios
+
+Backend
+- Node.js
+- Express.js
+
+Database
+- MongoDB Atlas
+- Mongoose
+
+Authentication
+- JSON Web Tokens (JWT)
+- bcrypt
+
+Development Tools
+- Nodemon
+- Concurrently
+
+---
+
+## Project Structure
+
+task-manager
+│
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   └── server entry
+│
+├── frontend
+│   ├── components
+│   ├── pages
+│   ├── api
+│   └── application entry
+│
+├── package.json
+└── README.md
+
+---
+
+## Installation & Setup
+
+Clone the repository
 
 git clone https://github.com/rudra20-04/task-manager.git
+
+Move into the project
+
 cd task-manager
 
 Install dependencies
 
 npm install
-cd backend && npm install
-cd ../frontend && npm install
 
-Run project
+Install backend dependencies
+
+cd backend
+npm install
+
+Install frontend dependencies
+
+cd ../frontend
+npm install
+
+---
+
+## Environment Configuration
+
+Create a .env file inside the backend folder and add:
+
+MONGO_URI=your_mongodb_connection_string  
+JWT_SECRET=your_secure_secret_key  
+PORT=5000
+
+---
+
+## Running the Application
+
+From the root directory run:
 
 npm run dev
 
-Frontend:
+Application will start on:
+
+Frontend  
 http://localhost:5173
 
-Backend:
+Backend  
 http://localhost:5000
 
-API:
+API  
 http://localhost:5000/api
 
 ---
 
-# 📡 API
+## API Endpoints
 
-Auth
+Authentication
 
 POST /api/auth/signup  
 POST /api/auth/login
@@ -123,69 +186,68 @@ PUT /api/tasks/reorder
 
 ---
 
-# 🌐 Deployment
+## Deployment
 
-Backend → Render  
-Frontend → Vercel
+Backend Deployment
+- Platform: Render
+- Root directory: backend
+- Build command: npm install
+- Start command: node index.js
 
-Add environment variables:
+Frontend Deployment
+- Platform: Vercel
+- Root directory: frontend
+- Build command: npm run build
+- Output directory: dist
 
-MONGO_URI  
-JWT_SECRET  
-PORT  
-VITE_API_URL
+Environment variable required for frontend:
 
----
-
-# 📁 Project Structure
-
-task-manager
-backend
-controllers
-models
-routes
-middleware
-frontend
-components
-pages
-api
+VITE_API_URL=your_backend_api_url
 
 ---
 
-# 🔒 Security
+## Security Practices Implemented
 
-- Password hashing
-- JWT authentication
-- Protected routes
-- User-based access control
-- Environment variables secured
-
----
-
-# 🧠 What I Learned
-
-- Building a full MERN stack application
-- Implementing authentication
-- Creating REST APIs
-- Database design with MongoDB
-- Deploying full-stack apps
-- Writing professional README files
+- Password hashing before storage
+- Token-based authentication
+- User-specific data isolation
+- Environment variable management
+- Input validation
 
 ---
 
-# 📈 Future Improvements
+## What This Project Demonstrates
+
+- Full-stack MERN architecture
+- Authentication system design
+- REST API development
+- Database schema design
+- Frontend state management
+- Production deployment workflow
+- Clean project documentation
+
+---
+
+## Future Enhancements
 
 - Team collaboration
-- Notifications
 - Task sharing
-- Mobile app version
+- Activity logs
+- Notifications system
+- Mobile application version
 
 ---
 
-# 📄 License
+## License
 
 MIT License
 
-Built with ❤️ using MERN Stack
+---
+
+## Author
+GitHub: https://github.com/rudra20-04
+
+
+GitHub: https://github.com/rudra20-04
 
 EOF
