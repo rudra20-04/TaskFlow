@@ -1,28 +1,12 @@
-<div align="center">
+cat > README.md << 'EOF'
+# ✅ TaskFlow
 
-<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-<img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/MongoDB-mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
-<img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-
-<h1>✅ TaskFlow</h1>
-
-<p>
-<strong>A modern full-stack MERN task manager with secure JWT authentication, drag-and-drop task reordering, tags, priority system, analytics dashboard, and a beautiful glassmorphism UI with dark/light mode.</strong>
-</p>
-
-<a href="#features">Features</a> •
-<a href="#quickstart">Quick Start</a> •
-<a href="#api">API</a> •
-<a href="#deploy">Deployment</a>
-
-</div>
+A modern full-stack **MERN Task Manager** with JWT authentication, drag-and-drop task reordering, tags, priority system, analytics dashboard, and glassmorphism UI with dark/light mode.
 
 ---
 
 # 🌍 Live Demo
-*(Add after deployment)*
+(Add after deployment)
 
 Frontend: https://your-frontend-link.vercel.app  
 Backend API: https://your-backend-link.onrender.com/api
@@ -41,82 +25,167 @@ Backend API: https://your-backend-link.onrender.com/api
 
 # ✨ Features
 
-## 🔐 Authentication
-- Secure **JWT-based authentication**
-- User **signup and login system**
-- Password hashing using **bcryptjs**
-- Protected routes (frontend + backend)
-- Token stored securely in localStorage
-- Session expiry (7 days)
+## Authentication
+- JWT based login & signup
+- Password hashing using bcryptjs
+- Protected routes
+- Token stored in localStorage
+- Session expiry
 
----
-
-## ✅ Task Management
+## Task Management
 - Create, update, delete tasks
-- Priority system  
-  - Low 🟢  
-  - Medium 🟡  
-  - High 🔴
-- Toggle task status instantly
-- Due dates with **overdue detection**
-- Tag system for task categorization
-- Drag-and-drop reordering
-- Task order saved in database
+- Priority levels (Low / Medium / High)
+- Task completion toggle
+- Due dates with overdue detection
+- Tags support
+- Drag and drop task reordering
 
----
-
-## 🔍 Search & Filters
+## Search & Filters
 - Real-time search
-- Search by:
-  - Title
-  - Description
-  - Tags
-- Filter tasks:
-  - All
-  - Pending
-  - Completed
+- Filter tasks (All / Pending / Completed)
 
----
-
-## 📊 Dashboard Analytics
+## Dashboard Stats
 - Total tasks
 - Pending tasks
 - Completion rate
-- Overdue tasks indicator
+- Overdue tasks
 
----
-
-## 🎨 UI / UX
-- Dark and Light mode toggle
-- Glassmorphism UI
+## UI
+- Dark & Light mode
+- Glassmorphism design
 - Smooth animations
-- Toast notifications
-- Mobile responsive
-- Modern dashboard layout
+- Responsive layout
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-| Layer | Technology |
-|------|------------|
-| Frontend | React 19, Vite 7, React Router |
-| Styling | CSS (Glassmorphism UI) |
-| HTTP Client | Axios |
-| Icons | Lucide React |
-| Backend | Node.js, Express |
-| Database | MongoDB Atlas |
-| ORM | Mongoose |
-| Authentication | JWT |
-| Security | bcryptjs |
-| Dev Tools | Nodemon, Concurrently |
+Frontend:
+React, Vite, React Router
+
+Backend:
+Node.js, Express
+
+Database:
+MongoDB Atlas, Mongoose
+
+Authentication:
+JWT, bcryptjs
+
+Tools:
+Axios, Nodemon, Concurrently
 
 ---
 
 # 🚀 Quick Start
 
-## 1. Clone the Repository
+Clone the repo
 
-```bash
 git clone https://github.com/rudra20-04/task-manager.git
 cd task-manager
+
+Install dependencies
+
+npm install
+cd backend && npm install
+cd ../frontend && npm install
+
+Run project
+
+npm run dev
+
+Frontend:
+http://localhost:5173
+
+Backend:
+http://localhost:5000
+
+API:
+http://localhost:5000/api
+
+---
+
+# 📡 API
+
+Auth
+
+POST /api/auth/signup  
+POST /api/auth/login
+
+Tasks
+
+GET /api/tasks  
+POST /api/tasks  
+PUT /api/tasks/:id  
+DELETE /api/tasks/:id  
+PATCH /api/tasks/:id/status  
+PUT /api/tasks/reorder
+
+---
+
+# 🌐 Deployment
+
+Backend → Render  
+Frontend → Vercel
+
+Add environment variables:
+
+MONGO_URI  
+JWT_SECRET  
+PORT  
+VITE_API_URL
+
+---
+
+# 📁 Project Structure
+
+task-manager
+backend
+controllers
+models
+routes
+middleware
+frontend
+components
+pages
+api
+
+---
+
+# 🔒 Security
+
+- Password hashing
+- JWT authentication
+- Protected routes
+- User-based access control
+- Environment variables secured
+
+---
+
+# 🧠 What I Learned
+
+- Building a full MERN stack application
+- Implementing authentication
+- Creating REST APIs
+- Database design with MongoDB
+- Deploying full-stack apps
+- Writing professional README files
+
+---
+
+# 📈 Future Improvements
+
+- Team collaboration
+- Notifications
+- Task sharing
+- Mobile app version
+
+---
+
+# 📄 License
+
+MIT License
+
+Built with ❤️ using MERN Stack
+
+EOF
