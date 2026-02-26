@@ -92,24 +92,24 @@ Development Tools
 
 ## Project Structure
 
-task-manager
-│
-├── backend
-│   ├── config
-│   ├── controllers
-│   ├── middleware
-│   ├── models
-│   ├── routes
-│   └── server entry
-│
-├── frontend
-│   ├── components
-│   ├── pages
-│   ├── api
-│   └── application entry
-│
-├── package.json
-└── README.md
+task-manager<br>
+│<br>
+├── backend<br>
+│   ├── config<br>
+│   ├── controllers<br>
+│   ├── middleware<br>
+│   ├── models<br>
+│   ├── routes<br>
+│   └── server entry<br>
+│<br>
+├── frontend<br>
+│   ├── components<br>
+│   ├── pages<br>
+│   ├── api<br>
+│   └── application entry<br>
+│<br>
+├── package.json<br>
+└── README.md<br>
 
 ---
 
@@ -251,3 +251,4 @@ GitHub: https://github.com/rudra20-04
 GitHub: https://github.com/rudra20-04
 
 EOF
+
