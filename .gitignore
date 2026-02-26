@@ -1,0 +1,43 @@
+# ============================
+# Root-level .gitignore
+# ============================
+
+# Environment variables — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Lock files (keep package-lock.json but ignore these)
+# package-lock.json
+
+# Vite cache
+.vite/
+
+# Build artifacts / logs
+build_log.txt
